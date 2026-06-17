@@ -5,9 +5,9 @@ Folder ini adalah raw GitHub Pages independen untuk Pre Test Teacher Training.
 ## Link utama setelah upload
 - `index.html`: halaman test utama
 - `test.html`: halaman test alternatif
-- `hub.html`: hub kecil untuk test ini
-- `results-dashboard.html`: dashboard hasil
-- `answer-key.html`: soal dan kunci jawaban trainer
+
+Folder test ini sengaja tidak berisi spreadsheet hasil dan kunci jawaban.
+Gunakan folder `hub` khusus admin untuk akses dashboard dan kunci jawaban.
 
 Halaman depan test hanya meminta:
 1. Email Pengajar
