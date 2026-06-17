@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pre Test Teacher Training</title>
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<main class="test-shell">
+  <form id="testForm">
+    <section class="test-card test-landing" id="introCard">
+      <div>
+        <p class="eyebrow">Holiday Program Mathpreneur F&B</p>
+        <span class="tag blue">10 soal pilihan ganda</span>
+        <h1>Pre Test Teacher Training</h1>
+        <p class="lead">Cek pemahaman awal pengajar sebelum masuk ke briefing Holiday Program Mathpreneur F&amp;B.</p>
+        <p class="sublead">Jawab berdasarkan pengetahuan awal. Tidak apa-apa kalau belum yakin, nanti kita bahas di training.</p>
+        <details class="teacher-menu">
+          <summary>CATATAN PESERTA</summary>
+          <ul>
+            <li>Isi data pengajar dengan benar sebelum mulai.</li>
+            <li>Untuk pengajar kelas online, isi kolom Cabang dengan <strong>ONLINE</strong>.</li>
+            <li>Test hanya bisa disubmit satu kali per email untuk halaman ini.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="panel">
+        <h2>Data Pengajar</h2>
+        <ul class="steps">
+          <li><span>1</span><strong>Isi Email Pengajar, Nama Lengkap, dan Cabang.</strong></li>
+          <li><span>2</span><strong>Klik Mulai Test.</strong></li>
+          <li><span>3</span><strong>Jawab semua soal dan submit satu kali.</strong></li>
+        </ul>
+        <div class="form-grid" style="margin-top:18px">
+          <div class="field">
+            <label for="email">Email Pengajar</label>
+            <input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="teacherName">Nama Lengkap</label>
+            <input id="teacherName" name="teacherName" type="text" placeholder="Tulis nama lengkap" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="branchName">Cabang</label>
+            <input id="branchName" name="branchName" type="text" placeholder="Contoh: Bekasi / ONLINE" required>
+            <p class="field-hint">Jika pengajar kelas online, isi dengan <strong>ONLINE</strong>.</p>
+          </div>
+        </div>
+        <div class="actions" style="margin-top:18px">
+          <button class="button" type="button" id="startButton">Mulai Test</button>
+          <a class="button light" href="hub.html">Kembali ke Hub</a>
+        </div>
+        <div class="status-box" id="statusBox" role="status"></div>
+      </div>
+    </section>
+    <section class="test-card hidden" id="quizCard">
+      <div class="quiz-topline">
+        <span class="quiz-pill">Teacher Training</span>
+        <span class="quiz-pill">Pre Test</span>
+        <span class="quiz-pill" id="quizParticipant">Pengajar</span>
+      </div>
+      <h1>Pre Test Teacher Training</h1>
+      <p class="lead">Pilih satu jawaban yang paling tepat.</p>
+      <section class="question-card">
+  <h3>1. Tujuan utama Holiday Program Mathpreneur F&amp;B adalah ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q1" value="A" required>
+    <strong>A.</strong> Siswa menghafal resep makanan sebanyak mungkin.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q1" value="B" required>
+    <strong>B.</strong> Siswa belajar membuat ide produk F&amp;B, menghitung sederhana, dan mempresentasikan produknya.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q1" value="C" required>
+    <strong>C.</strong> Siswa hanya menonton guru menjelaskan bisnis.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q1" value="D" required>
+    <strong>D.</strong> Siswa mengikuti lomba memasak tanpa worksheet.
+  </label>
+</section>
+<section class="question-card">
+  <h3>2. Perbedaan utama kelas offline dan online dalam program ini adalah ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q2" value="A" required>
+    <strong>A.</strong> Offline tidak memakai matematika, online memakai matematika.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q2" value="B" required>
+    <strong>B.</strong> Offline berakhir dengan market day internal, online berakhir dengan online product showcase.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q2" value="C" required>
+    <strong>C.</strong> Online tidak memakai worksheet sama sekali.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q2" value="D" required>
+    <strong>D.</strong> Offline hanya berisi pre test dan post test.
+  </label>
+</section>
+<section class="question-card">
+  <h3>3. Hal paling tepat dilakukan guru sebelum kelas dimulai adalah ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q3" value="A" required>
+    <strong>A.</strong> Mencari file saat siswa sudah masuk kelas.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q3" value="B" required>
+    <strong>B.</strong> Membuka hub GitHub, membaca rundown, mengecek deck, worksheet, dan link penting.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q3" value="C" required>
+    <strong>C.</strong> Menunggu siswa bertanya dulu baru membuka materi.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q3" value="D" required>
+    <strong>D.</strong> Langsung membagikan kunci jawaban agar kelas cepat selesai.
+  </label>
+</section>
+<section class="question-card">
+  <h3>4. Dalam kelas online, siswa sebaiknya menyiapkan ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q4" value="A" required>
+    <strong>A.</strong> Worksheet yang sudah diprint, alat tulis, dan device untuk meeting.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q4" value="B" required>
+    <strong>B.</strong> Hanya kamera tanpa alat tulis.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q4" value="C" required>
+    <strong>C.</strong> Produk jualan dari hari pertama.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q4" value="D" required>
+    <strong>D.</strong> Kunci jawaban pre test.
+  </label>
+</section>
+<section class="question-card">
+  <h3>5. Jika guru ingin membuka semua kebutuhan mengajar, tempat pertama yang paling aman dibuka adalah ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q5" value="A" required>
+    <strong>A.</strong> Folder acak di laptop pribadi.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q5" value="B" required>
+    <strong>B.</strong> Link hub GitHub sesuai format kelas, online atau offline.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q5" value="C" required>
+    <strong>C.</strong> Chat lama yang belum tentu lengkap.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q5" value="D" required>
+    <strong>D.</strong> Halaman kunci jawaban terlebih dahulu.
+  </label>
+</section>
+<section class="question-card">
+  <h3>6. Saat mengajar siswa SD, instruksi yang paling baik adalah ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q6" value="A" required>
+    <strong>A.</strong> Panjang, cepat, dan banyak istilah sulit.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q6" value="B" required>
+    <strong>B.</strong> Pendek, konkret, diberi contoh, lalu siswa diberi waktu mencoba.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q6" value="C" required>
+    <strong>C.</strong> Hanya dibaca dari slide tanpa interaksi.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q6" value="D" required>
+    <strong>D.</strong> Selalu menggunakan istilah bisnis orang dewasa.
+  </label>
+</section>
+<section class="question-card">
+  <h3>7. Pre test dan post test berguna untuk ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q7" value="A" required>
+    <strong>A.</strong> Mengukur pemahaman awal dan perubahan pemahaman setelah belajar.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q7" value="B" required>
+    <strong>B.</strong> Mengganti seluruh kegiatan worksheet.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q7" value="C" required>
+    <strong>C.</strong> Menentukan siswa boleh ikut kelas atau tidak.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q7" value="D" required>
+    <strong>D.</strong> Membuat siswa menghafal semua nama slide.
+  </label>
+</section>
+<section class="question-card">
+  <h3>8. Setelah sesi kelas berakhir, guru perlu mengisi berita acara karena ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q8" value="A" required>
+    <strong>A.</strong> Agar dokumentasi, evaluasi, kendala, dan progres kelas tercatat.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q8" value="B" required>
+    <strong>B.</strong> Agar guru tidak perlu mengajar sesi berikutnya.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q8" value="C" required>
+    <strong>C.</strong> Agar siswa tidak perlu mengerjakan worksheet.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q8" value="D" required>
+    <strong>D.</strong> Agar link GitHub bisa dibuka.
+  </label>
+</section>
+<section class="question-card">
+  <h3>9. Jika guru sedang share screen, hal yang perlu diperhatikan adalah ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q9" value="A" required>
+    <strong>A.</strong> Menampilkan semua tab termasuk kunci jawaban.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q9" value="B" required>
+    <strong>B.</strong> Share hanya halaman yang sedang dipakai siswa dan tidak membuka kunci jawaban.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q9" value="C" required>
+    <strong>C.</strong> Membiarkan notifikasi pribadi muncul.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q9" value="D" required>
+    <strong>D.</strong> Membuka dashboard hasil saat siswa sedang mengerjakan soal.
+  </label>
+</section>
+<section class="question-card">
+  <h3>10. Kalimat guru yang paling membantu siswa saat ide produknya belum rapi adalah ...</h3>
+  <label class="option-label">
+    <input type="radio" name="q10" value="A" required>
+    <strong>A.</strong> Ini salah, ganti semuanya.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q10" value="B" required>
+    <strong>B.</strong> Idemu sudah punya bahan utama. Yuk kita buat lebih sederhana dan aman dibuat di rumah.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q10" value="C" required>
+    <strong>C.</strong> Tidak usah dikerjakan.
+  </label>
+  <label class="option-label">
+    <input type="radio" name="q10" value="D" required>
+    <strong>D.</strong> Tunggu teman lain saja.
+  </label>
+</section>
+      <div class="actions">
+        <button class="button secondary" type="submit">Submit Jawaban</button>
+        <a class="button light" href="hub.html">Kembali ke Hub</a>
+      </div>
+      <div class="status-box" id="quizStatusBox" role="status"></div>
+    </section>
+  </form>
+</main>
+<script src="test-config.js"></script>
+<script src="test-data.js"></script>
+<script src="assets/test-runner.js"></script>
+<script>window.renderTeacherTrainingTest("pre");</script>
+</body>
+</html>

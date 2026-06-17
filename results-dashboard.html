@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Hasil Teacher Training</title>
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<main class="test-shell">
+  <section class="test-card">
+    <p class="eyebrow">Spreadsheet Hasil</p>
+    <h1>Dashboard Hasil Teacher Training</h1>
+    <p class="lead">Halaman ini menampilkan hasil test pengajar. Admin/trainer bisa refresh data dan export CSV.</p>
+    <details class="teacher-menu">
+      <summary>CATATAN ADMIN / TRAINER</summary>
+      <ul>
+        <li>Dashboard ini bukan untuk peserta training.</li>
+        <li>Klik Refresh Data setelah peserta submit test.</li>
+        <li>Gunakan Export CSV jika ingin menarik data ke Google Sheets.</li>
+      </ul>
+    </details>
+    <div class="button-row" style="margin-top:18px">
+      <button class="button light" id="refreshBtn" type="button">Refresh Data</button>
+      <button class="button secondary" id="exportBtn" type="button">Export CSV</button>
+      <a class="button" href="index.html">Kembali</a>
+      <a class="button warn" id="spreadsheetLink" href="#" target="_blank" rel="noopener">Buka Spreadsheet Arsip</a>
+    </div>
+    <div class="status-box warn" id="resultsStatus">Belum memuat data.</div>
+  </section>
+  <section class="results-summary">
+    <article class="metric-card"><strong id="totalSubmits">0</strong><span>Total Submit</span></article>
+    <article class="metric-card"><strong id="avgScore">0</strong><span>Rata-rata Nilai</span></article>
+    <article class="metric-card"><strong id="preCount">0</strong><span>Pre Test</span></article>
+    <article class="metric-card"><strong id="postCount">0</strong><span>Post Test</span></article>
+  </section>
+  <section class="test-card">
+    <div class="filter-row">
+      <div class="field"><label for="testFilter">Jenis Test</label><select id="testFilter"><option value="">Semua</option></select></div>
+      <div class="field"><label for="branchFilter">Cabang</label><input id="branchFilter" type="text" placeholder="Cari cabang"></div>
+      <div class="field"><label for="keywordFilter">Nama / Email</label><input id="keywordFilter" type="text" placeholder="Cari peserta"></div>
+    </div>
+  </section>
+  <section class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tanggal</th><th>Waktu</th><th>Test</th><th>Nama Pengajar</th><th>Email</th><th>Cabang</th><th>Benar</th><th>Nilai</th><th>Jawaban</th>
+        </tr>
+      </thead>
+      <tbody id="resultsBody"><tr><td colspan="9">Belum ada data.</td></tr></tbody>
+    </table>
+  </section>
+</main>
+<script src="test-config.js"></script>
+<script src="test-data.js"></script>
+<script src="assets/dashboard.js"></script>
+</body>
+</html>
