@@ -102,23 +102,16 @@ function renderTeacherTrainingTest(testKey) {
       setStatus("warn", "Isi Email Pengajar, Nama Lengkap, dan Cabang dulu ya. Untuk kelas online, isi Cabang dengan ONLINE.");
       return;
     }
-    startButton.disabled = true;
-    setStatus("warn", "Mengecek data pengajar...");
-    try {
-      if (await hasAlreadySubmitted(email)) {
-        setStatus("warn", "Email ini sudah pernah submit test ini. Jika ada kesalahan, hubungi trainer/admin.");
-        startButton.disabled = false;
-        return;
-      }
-      document.getElementById("quizParticipant").textContent = name + " | " + branch;
-      document.getElementById("introCard").classList.add("hidden");
-      document.getElementById("quizCard").classList.remove("hidden");
-      window.scrollTo(0, 0);
-    } catch (error) {
-      console.error(error);
-      setStatus("err", "Belum bisa mengecek data. Cek koneksi internet lalu coba lagi.");
-      startButton.disabled = false;
+    const key = participantKey(email);
+    if (localStorage.getItem("mathchamps-teacher-training-submitted:" + key)) {
+      setStatus("warn", "Email ini sudah pernah submit test ini di device ini. Jika ada kesalahan, hubungi trainer/admin.");
+      return;
     }
+    startButton.disabled = true;
+    document.getElementById("quizParticipant").textContent = name + " | " + branch;
+    document.getElementById("introCard").classList.add("hidden");
+    document.getElementById("quizCard").classList.remove("hidden");
+    window.scrollTo(0, 0);
   });
 
   document.getElementById("testForm").addEventListener("submit", async (event) => {
